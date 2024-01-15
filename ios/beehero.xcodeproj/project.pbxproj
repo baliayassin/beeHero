@@ -14,6 +14,25 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-beehero-beeheroTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-beehero-beeheroTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		AE5B34932B55C9E900060230 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34802B55C9E900060230 /* Fontisto.ttf */; };
+		AE5B34942B55C9E900060230 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34812B55C9E900060230 /* Octicons.ttf */; };
+		AE5B34952B55C9E900060230 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34822B55C9E900060230 /* Feather.ttf */; };
+		AE5B34962B55C9E900060230 /* FontAwesome6_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34832B55C9E900060230 /* FontAwesome6_Regular.ttf */; };
+		AE5B34972B55C9E900060230 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34842B55C9E900060230 /* Entypo.ttf */; };
+		AE5B34982B55C9E900060230 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34852B55C9E900060230 /* FontAwesome5_Brands.ttf */; };
+		AE5B34992B55C9E900060230 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34862B55C9E900060230 /* MaterialCommunityIcons.ttf */; };
+		AE5B349A2B55C9E900060230 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34872B55C9E900060230 /* AntDesign.ttf */; };
+		AE5B349B2B55C9E900060230 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34882B55C9E900060230 /* Foundation.ttf */; };
+		AE5B349C2B55C9E900060230 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34892B55C9E900060230 /* Ionicons.ttf */; };
+		AE5B349D2B55C9E900060230 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B348A2B55C9E900060230 /* FontAwesome5_Solid.ttf */; };
+		AE5B349E2B55C9E900060230 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B348B2B55C9E900060230 /* FontAwesome5_Regular.ttf */; };
+		AE5B349F2B55C9E900060230 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B348C2B55C9E900060230 /* FontAwesome.ttf */; };
+		AE5B34A02B55C9E900060230 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B348D2B55C9E900060230 /* Zocial.ttf */; };
+		AE5B34A12B55C9E900060230 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B348E2B55C9E900060230 /* EvilIcons.ttf */; };
+		AE5B34A22B55C9E900060230 /* FontAwesome6_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B348F2B55C9E900060230 /* FontAwesome6_Solid.ttf */; };
+		AE5B34A32B55C9E900060230 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34902B55C9E900060230 /* SimpleLineIcons.ttf */; };
+		AE5B34A42B55C9E900060230 /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34912B55C9E900060230 /* FontAwesome6_Brands.ttf */; };
+		AE5B34A52B55C9E900060230 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5B34922B55C9E900060230 /* MaterialIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +62,25 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-beehero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beehero.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = beehero/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-beehero-beeheroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beehero-beeheroTests.release.xcconfig"; path = "Target Support Files/Pods-beehero-beeheroTests/Pods-beehero-beeheroTests.release.xcconfig"; sourceTree = "<group>"; };
+		AE5B34802B55C9E900060230 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		AE5B34812B55C9E900060230 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		AE5B34822B55C9E900060230 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		AE5B34832B55C9E900060230 /* FontAwesome6_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Regular.ttf; sourceTree = "<group>"; };
+		AE5B34842B55C9E900060230 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		AE5B34852B55C9E900060230 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		AE5B34862B55C9E900060230 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		AE5B34872B55C9E900060230 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		AE5B34882B55C9E900060230 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		AE5B34892B55C9E900060230 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		AE5B348A2B55C9E900060230 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		AE5B348B2B55C9E900060230 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		AE5B348C2B55C9E900060230 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		AE5B348D2B55C9E900060230 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		AE5B348E2B55C9E900060230 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		AE5B348F2B55C9E900060230 /* FontAwesome6_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Solid.ttf; sourceTree = "<group>"; };
+		AE5B34902B55C9E900060230 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		AE5B34912B55C9E900060230 /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
+		AE5B34922B55C9E900060230 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -116,6 +154,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				AE5B347F2B55C9E900060230 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* beehero */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* beeheroTests */,
@@ -135,6 +174,33 @@
 				00E356EE1AD99517003FC87E /* beeheroTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AE5B347F2B55C9E900060230 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AE5B34802B55C9E900060230 /* Fontisto.ttf */,
+				AE5B34812B55C9E900060230 /* Octicons.ttf */,
+				AE5B34822B55C9E900060230 /* Feather.ttf */,
+				AE5B34832B55C9E900060230 /* FontAwesome6_Regular.ttf */,
+				AE5B34842B55C9E900060230 /* Entypo.ttf */,
+				AE5B34852B55C9E900060230 /* FontAwesome5_Brands.ttf */,
+				AE5B34862B55C9E900060230 /* MaterialCommunityIcons.ttf */,
+				AE5B34872B55C9E900060230 /* AntDesign.ttf */,
+				AE5B34882B55C9E900060230 /* Foundation.ttf */,
+				AE5B34892B55C9E900060230 /* Ionicons.ttf */,
+				AE5B348A2B55C9E900060230 /* FontAwesome5_Solid.ttf */,
+				AE5B348B2B55C9E900060230 /* FontAwesome5_Regular.ttf */,
+				AE5B348C2B55C9E900060230 /* FontAwesome.ttf */,
+				AE5B348D2B55C9E900060230 /* Zocial.ttf */,
+				AE5B348E2B55C9E900060230 /* EvilIcons.ttf */,
+				AE5B348F2B55C9E900060230 /* FontAwesome6_Solid.ttf */,
+				AE5B34902B55C9E900060230 /* SimpleLineIcons.ttf */,
+				AE5B34912B55C9E900060230 /* FontAwesome6_Brands.ttf */,
+				AE5B34922B55C9E900060230 /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -241,8 +307,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5B349E2B55C9E900060230 /* FontAwesome5_Regular.ttf in Resources */,
+				AE5B34932B55C9E900060230 /* Fontisto.ttf in Resources */,
+				AE5B34982B55C9E900060230 /* FontAwesome5_Brands.ttf in Resources */,
+				AE5B349C2B55C9E900060230 /* Ionicons.ttf in Resources */,
+				AE5B349D2B55C9E900060230 /* FontAwesome5_Solid.ttf in Resources */,
+				AE5B34972B55C9E900060230 /* Entypo.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				AE5B349A2B55C9E900060230 /* AntDesign.ttf in Resources */,
+				AE5B34A02B55C9E900060230 /* Zocial.ttf in Resources */,
+				AE5B349B2B55C9E900060230 /* Foundation.ttf in Resources */,
+				AE5B34A42B55C9E900060230 /* FontAwesome6_Brands.ttf in Resources */,
+				AE5B34952B55C9E900060230 /* Feather.ttf in Resources */,
+				AE5B34A32B55C9E900060230 /* SimpleLineIcons.ttf in Resources */,
+				AE5B34A12B55C9E900060230 /* EvilIcons.ttf in Resources */,
+				AE5B34942B55C9E900060230 /* Octicons.ttf in Resources */,
+				AE5B349F2B55C9E900060230 /* FontAwesome.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				AE5B34992B55C9E900060230 /* MaterialCommunityIcons.ttf in Resources */,
+				AE5B34A22B55C9E900060230 /* FontAwesome6_Solid.ttf in Resources */,
+				AE5B34962B55C9E900060230 /* FontAwesome6_Regular.ttf in Resources */,
+				AE5B34A52B55C9E900060230 /* MaterialIcons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +498,7 @@
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-beehero-beeheroTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PFMS6GK3HP;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -441,6 +527,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = PFMS6GK3HP;
 				INFOPLIST_FILE = beeheroTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,7 +540,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = beehero.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beehero.app/beehero";
 			};
@@ -466,6 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PFMS6GK3HP;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = beehero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,7 +566,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "bee-hero.app";
 				PRODUCT_NAME = beehero;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -492,7 +580,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PFMS6GK3HP;
 				INFOPLIST_FILE = beehero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,8 +595,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "bee-hero.app";
 				PRODUCT_NAME = beehero;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

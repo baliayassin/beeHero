@@ -1,11 +1,12 @@
 #import "AppDelegate.h"
-
+#import <GoogleMaps/GoogleMaps.h>
 #import <React/RCTBundleURLProvider.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [GMSServices provideAPIKey:@"AIzaSyDo7n4891MIx3cqH2kvyHoAiLK_HeKYqW8"]; // add this line using the api key obtained from Google Console
   self.moduleName = @"beehero";
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
