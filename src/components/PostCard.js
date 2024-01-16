@@ -45,9 +45,9 @@ export default function PostCard({navigation} = props) {
     );
   };
 
-  const toggleModal = (postId) => {
-    setSelectedPostId((prevId) => (prevId === postId ? null : postId));
-    setModalVisible((prevVisible) => !prevVisible);
+  const toggleModal = postId => {
+    setSelectedPostId(prevId => (prevId === postId ? null : postId));
+    setModalVisible(prevVisible => !prevVisible);
   };
 
   const handelModal = post => {
@@ -59,36 +59,50 @@ export default function PostCard({navigation} = props) {
   const renderPostCard = ({item: post}) => {
     const isSelected = selectedPostId === post.id;
     const {title, body} = post;
-    if (title) {
-      setTitle(title);
+
+    if (selectedUserState && post.userId === selectedUserState.id) {
+      return (
+        <View
+          style={[
+            styles.postCard,
+            isSelected ? styles.selectedPostCard : null,
+          ]}>
+          <TouchableOpacity
+            style={styles.editIconButton}
+            onPress={() => handelModal(post)}>
+            <Icons name="edit" size={15} />
+          </TouchableOpacity>
+          <Text style={styles.title}>
+            Title: {title.length > 10 ? `${title.slice(0, 5)}...` : title}
+          </Text>
+          <Text style={styles.body}>
+            Body: {body.length > 10 ? `${body.slice(0, 5)}...` : body}
+          </Text>
+          <TouchableOpacity
+            onPress={() => onDeletePost(post.id)}
+            style={styles.deleteButton}>
+            <Text style={styles.closeButton}>X</Text>
+          </TouchableOpacity>
+        </View>
+      );
     }
-    setDescription(body);
-    return (
-      <View style={[styles.postCard,isSelected ? styles.selectedPostCard : null]}>
-        <TouchableOpacity
-          style={styles.editIconButton}
-          onPress={() => handelModal(post)}>
-          <Icons name="edit" size={15} />
-        </TouchableOpacity>
-        <Text style={styles.title}>
-          Title: {title.length > 10 ? `${title.slice(0, 5)}...` : title}
-        </Text>
-        <Text style={styles.body}>
-          Body: {body.length > 10 ? `${body.slice(0, 5)}...` : body}
-        </Text>
-        <TouchableOpacity
-          onPress={() => onDeletePost(post.id)}
-          style={styles.deleteButton}>
-          <Text style={styles.closeButton}>X</Text>
-        </TouchableOpacity>
-      </View>
+    return null;
+  };
+
+  const handleData = () => {
+    if (!postsState || !selectedUserState) {
+      return [];
+    }
+
+    const filterData = postsState.filter(
+      item => item.userId === selectedUserState.id,
     );
+    return filterData;
   };
 
   return (
     <View>
-      <View
-        style={styles.userList}>
+      <View style={styles.userList}>
         <FlatList
           data={usersState}
           keyExtractor={item => item.id.toString()}
@@ -103,10 +117,9 @@ export default function PostCard({navigation} = props) {
             <Text style={styles.userNamePostsTitle}>
               User: {selectedUserState.name} Posts
             </Text>
-            <View
-              style={styles.postWrapper}>
+            <View style={styles.postWrapper}>
               <FlatList
-                data={postsState}
+                data={handleData()}
                 keyExtractor={item => item.id.toString()}
                 renderItem={renderPostCard}
                 numColumns={3}
@@ -145,7 +158,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#000',
   },
-  postWrapper:{
+  postWrapper: {
     width: '90%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -180,22 +193,22 @@ const styles = StyleSheet.create({
     marginTop: 28,
     marginBottom: 28,
   },
-  editIconButton:{
-    marginBottom: 10, 
-    width: 25
+  editIconButton: {
+    marginBottom: 10,
+    width: 25,
   },
-  userList:{
+  userList: {
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 80,
   },
-  flatlistWrapper:{
-    margin: 8, 
-    gap: 15
+  flatlistWrapper: {
+    margin: 8,
+    gap: 15,
   },
-  postsContainer:{
-    width:'100%'
+  postsContainer: {
+    width: '100%',
   },
   selectedPostCard: {
     borderWidth: 2,

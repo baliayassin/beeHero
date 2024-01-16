@@ -38,7 +38,7 @@ const rootReducer = (state = initialState, action) => {
     case 'SET_USERS':
       return {...state, users: action.payload};
     case 'SET_POSTS':
-      return {...state, posts: [...action.payload]};
+      return { ...state, posts: [...state.posts, ...action.payload] };
     case 'UPDATE_POST':
       const {userId, newTitle, newText} = action.payload;
       const editPosts = state.posts.map(post =>

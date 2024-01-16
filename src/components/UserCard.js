@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Platform} from 'react-native';
 import {ROUTES} from '../consts';
 import {useDispatch, useSelector} from 'react-redux';
@@ -7,20 +7,37 @@ import {getUserPosts} from '../services/ajax.service';
 
 export default function UserCard({user, onDelete, navigation}) {
   const selectedUserState = useSelector(state => state.selectedUser);
+  const {posts} = useSelector(state => state);
   const dispatch = useDispatch();
+  const [isFetching, setIsFetching] = useState(false);
 
   const handleSelectUser = async () => {
     if (selectedUserState?.id === user.id) {
       dispatch(selectUser(null));
     } else {
       dispatch(selectUser(user));
-      const data = await getUserPosts(
-        `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`,
-      );
-      dispatch(setPosts(data));
-      navigation.navigate(ROUTES.POST_CARD);
+      const isUserPostsPresent = posts.some(item => item.userId === user.id);
+      if (!isUserPostsPresent && !isFetching) {
+        try {
+          const data = await getUserPosts(
+            `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`,
+          );
+          dispatch(setPosts(data));
+        } catch (error) {
+          console.error('Error fetching user posts:', error);
+        } finally {
+          setIsFetching(false);
+        }
+      }
     }
   };
+
+  useEffect(() => {
+    if (isFetching) {
+      return;
+    }
+    navigation.navigate(ROUTES.POST_CARD);
+  }, [selectedUserState, isFetching]);
 
   const handleGeo = () => {
     navigation.navigate('map_page', {
@@ -99,8 +116,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'black',
   },
-  close:{
-    position: 'absolute', 
-    right:1
-  }
+  close: {
+    position: 'absolute',
+    right: 1,
+  },
 });
