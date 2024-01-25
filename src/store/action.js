@@ -22,10 +22,7 @@ export const setPosts = posts => ({
   payload: posts,
 });
 
-export const updatePost = (post) => {
- return ({
+export const updatePost = post => ({
   type: 'UPDATE_POST',
-  payload:post
- }) 
-  
-};
+  payload: post,
+});

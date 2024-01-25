@@ -1,13 +1,14 @@
 import React from 'react';
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import MapView, {Marker} from 'react-native-maps';
-import {useDispatch, useSelector} from 'react-redux';
-import Back from 'react-native-vector-icons//MaterialIcons';
+import {useSelector} from 'react-redux';
+import Back from 'react-native-vector-icons/MaterialIcons';
 
 const MapPage = ({route, navigation}) => {
   const {latitude, longitude} = route.params;
   const customMarkerImage = {uri: 'https://i.ibb.co/Bs2xB7S/beehero-icon.png'};
   const {selectedUser} = useSelector(state => state);
+
   const goBack = () => {
     navigation.goBack();
   };
@@ -29,7 +30,7 @@ const MapPage = ({route, navigation}) => {
           coordinate={{latitude, longitude}}
           title={selectedUser.name}
           description={`latitude:${latitude} longitude:${longitude}`}>
-          <Image source={customMarkerImage} style={{width: 40, height: 40}} />
+          <Image source={customMarkerImage} style={styles.image} />
         </Marker>
       </MapView>
     </View>
@@ -52,6 +53,10 @@ const styles = StyleSheet.create({
     top: 140,
     left: 30,
     zIndex: 1,
+  },
+  image: {
+    width: 40,
+    height: 40,
   },
 });
 
