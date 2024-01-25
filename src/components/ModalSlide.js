@@ -14,7 +14,6 @@ import {updatePost} from '../store/action';
 const ModalSlide = ({
   title,
   text,
-  userId,
   setModalVisible,
   modalVisible,
   postId,
@@ -102,11 +101,6 @@ const ModalSlide = ({
           </View>
         </View>
       </Modal>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => setModalVisible(true)}>
-        <Text style={styles.textStyle}>Show Modal</Text>
-      </TouchableOpacity>
     </View>
   );
 };

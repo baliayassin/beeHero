@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Platform} from 'react-native';
 import {ROUTES} from '../consts';
 import {useDispatch, useSelector} from 'react-redux';
@@ -9,7 +9,6 @@ export default function UserCard({user, onDelete, navigation}) {
   const selectedUserState = useSelector(state => state.selectedUser);
   const {posts} = useSelector(state => state);
   const dispatch = useDispatch();
-  const [isFetching, setIsFetching] = useState(false);
 
   const handleSelectUser = async () => {
     if (selectedUserState?.id === user.id) {
@@ -17,30 +16,22 @@ export default function UserCard({user, onDelete, navigation}) {
     } else {
       dispatch(selectUser(user));
       const isUserPostsPresent = posts.some(item => item.userId === user.id);
-      if (!isUserPostsPresent && !isFetching) {
+      if (!isUserPostsPresent) {
         try {
           const data = await getUserPosts(
             `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`,
           );
           dispatch(setPosts(data));
+          navigation.navigate(ROUTES.POST_CARD);
         } catch (error) {
           console.error('Error fetching user posts:', error);
-        } finally {
-          setIsFetching(false);
         }
       }
     }
   };
 
-  useEffect(() => {
-    if (isFetching) {
-      return;
-    }
-    navigation.navigate(ROUTES.POST_CARD);
-  }, [selectedUserState, isFetching]);
-
   const handleGeo = () => {
-    navigation.navigate('map_page', {
+    navigation.navigate(ROUTES.MAP_PAGE, {
       latitude: parseFloat(user.address.geo.lat),
       longitude: parseFloat(user.address.geo.lng),
     });
@@ -57,7 +48,7 @@ export default function UserCard({user, onDelete, navigation}) {
           selectedUserState?.id === user.id && styles.selectedCard,
         ]}>
         <Text style={styles.text}>{user.name}</Text>
-        <Text style={styles.text}>{user.username}</Text>
+        <Text style={styles.text}>{`(${user.username})`}</Text>
         <Text style={styles.text}>{user.email}</Text>
         <TouchableOpacity onPress={() => handleGeo()}>
           <Text style={[styles.text, styles.textCordenate]}>

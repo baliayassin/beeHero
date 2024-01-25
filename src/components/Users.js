@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {View, StyleSheet, FlatList, SafeAreaView} from 'react-native';
 import {getUsers} from '../services/ajax.service';
 import UserCard from './UserCard';
@@ -9,6 +9,7 @@ export default function Users({navigation}) {
   const dispatch = useDispatch();
   const {users} = useSelector(state => state);
   const itemsPerRow = 4;
+  
   useEffect(() => {
     fetchUsers = async () => {
       try {
@@ -42,7 +43,7 @@ export default function Users({navigation}) {
           keyExtractor={item => item?.id.toString()}
           renderItem={renderUserCard}
           numColumns={itemsPerRow}
-          columnWrapperStyle={{margin: 8, gap: 15}}
+          columnWrapperStyle={styles.flatlistWrapper}
         />
       </View>
     </SafeAreaView>
@@ -69,5 +70,9 @@ const styles = StyleSheet.create({
     elevation: 5,
     borderRadius: 8,
     backgroundColor: 'white',
+  },
+  flatlistWrapper: {
+    margin: 8,
+    gap: 15,
   },
 });

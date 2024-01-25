@@ -7,16 +7,13 @@ import ModalSlide from './ModalSlide';
 import Icons from 'react-native-vector-icons/FontAwesome5';
 
 export default function PostCard({navigation} = props) {
-  const selectSelectedUser = state => state.selectedUser;
-  const selectPosts = state => state.posts;
-  const selectUsers = state => state.users;
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedPostId, setSelectedPostId] = useState(null);
   const dispatch = useDispatch();
 
-  const selectedUserState = useSelector(selectSelectedUser);
-  const postsState = useSelector(selectPosts);
-  const usersState = useSelector(selectUsers);
+  const selectedUserState = useSelector(state => state.selectedUser);
+  const postsState = useSelector(state => state.posts);
+  const usersState = useSelector(state => state.users);
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
   const itemsPerRow = 4;
@@ -28,6 +25,7 @@ export default function PostCard({navigation} = props) {
   const onDeletePost = postId => {
     dispatch(deletePost(postId));
   };
+
   useEffect(() => {
     setSelectedPostId(null);
   }, [selectedUserState]);

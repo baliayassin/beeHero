@@ -10,12 +10,13 @@ const rootReducer = (state = initialState, action) => {
       return {...state, selectedUser: action.payload};
     case 'DELETE_USER':
       const userIdToDelete = action.payload;
-      const updatedUsers = state.users.filter(
-        user => user.id !== userIdToDelete,
-      );
       const updatedPosts = state.posts.filter(
         post => post.userId !== userIdToDelete,
       );
+      const updatedUsers = state.users.filter(
+        user => user.id !== userIdToDelete,
+      );
+     
 
       return {
         ...state,
